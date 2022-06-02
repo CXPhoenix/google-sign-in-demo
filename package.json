@@ -8,12 +8,14 @@
     "git-cz": "git-cz"
   },
   "devDependencies": {
-    "vite": "^2.7.2",
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.5",
-    "tailwindcss": "^3.0.18"
+    "tailwindcss": "^3.0.18",
+    "vite": "^2.7.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "git-cz": "^4.9.0"
+  }
 }

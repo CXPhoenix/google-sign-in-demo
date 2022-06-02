@@ -14,10 +14,10 @@
     <img src="" width="0" height="0" style="position: fixed; top: 0" />
     <div
       id="app"
-      class="flex h-screen w-screen flex-col items-center justify-center"
+      class="flex h-screen w-screen flex-col items-center justify-center bg-[#333]"
     >
       <form
-        class="flex min-h-[500px] w-[448px] items-center justify-center rounded-lg border-gray-300 px-[20px] pt-[48px] pb-[36px] md:border-[1px]"
+        class="flex min-h-[500px] w-[448px] items-center justify-center rounded-lg border-gray-800 bg-[#222] px-[20px] pt-[48px] pb-[36px] text-white md:border-[1px]"
       >
         <div class="flex h-full w-11/12 flex-col items-center gap-3">
           <div id="googleimg" class="">
@@ -68,22 +68,25 @@
               </g>
             </svg>
           </div>
-          <h1 class="cursor-text text-[24px] font-normal leading-[1.3333]">
+          <h1
+            class="cursor-text text-[24px] font-normal leading-[1.3333] text-[#999]"
+          >
             登入
           </h1>
           <h2 class="cursor-text">繼續使用 Google 新聞</h2>
           <div class="h-4"></div>
           <label for="googleAddr" class="group relative w-full">
             <p
-              class="absolute inset-y-[1.05rem] left-4 cursor-text text-[15px] text-gray-500 duration-75 group-focus-within:left-[0.4rem] group-focus-within:-translate-y-[1.45rem] group-focus-within:bg-white group-focus-within:px-[6px] group-focus-within:text-xs group-focus-within:text-blue-500"
+              id="email-text"
+              class="absolute inset-y-[1.05rem] left-4 cursor-text text-[15px] text-gray-500 duration-75 group-focus-within:left-[0.4rem] group-focus-within:-translate-y-[1.45rem] group-focus-within:bg-[#222] group-focus-within:px-[6px] group-focus-within:text-xs group-focus-within:text-blue-700"
             >
               電子郵件地址或是電話號碼
             </p>
             <input
-              type="text"
+              type="email"
               name="googleAddr"
               id="googleAddr"
-              class="w-full rounded-[4px] border-[1px] border-gray-300 py-[13px] px-[15px] text-[17px] group-focus-within:outline-blue-500"
+              class="w-full rounded-[4px] border-[1px] border-[#333] bg-[#222] py-[13px] px-[15px] text-[17px] group-focus-within:outline-[#333]"
               required
             />
           </label>
@@ -103,7 +106,7 @@
           </label> -->
           <a
             href="https://accounts.google.com/signin/v2/usernamerecovery?service=wise&passive=true&continue=http%3A%2F%2Fdrive.google.com%2F%3Futm_source%3Den&utm_medium=button&utm_campaign=web&utm_content=gotodrive&usp=gtd&ltmpl=drive&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
-            class="cursor-pointer self-start text-[15px] text-blue-500"
+            class="cursor-pointer self-start text-[15px] text-blue-600"
           >
             忘記密碼？
           </a>
@@ -112,7 +115,7 @@
             如果這不是你的電腦，請使用訪客模式以私密方式登入。
             <a
               href="https://support.google.com/chrome/answer/6130773?hl=zh-TW"
-              class="cursor-pointer text-blue-500"
+              class="cursor-pointer text-blue-600"
               >瞭解詳情</a
             >
           </div>
@@ -121,14 +124,14 @@
             <div class="relative">
               <a
                 href="https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp"
-                class="cursor-pointer rounded-[4px] px-3 py-2 text-blue-500 hover:bg-[#e4effc]/30 hover:text-[#174ea6]"
+                class="cursor-pointer rounded-[4px] px-3 py-2 text-blue-500 hover:bg-[#555]/30 hover:text-[#174ea6]"
               >
                 建立帳戶
               </a>
             </div>
             <input
               type="submit"
-              class="cursor-pointer rounded-[4px] bg-blue-600 px-6 py-2 text-white hover:bg-blue-700"
+              class="cursor-pointer rounded-[4px] bg-blue-900 px-6 py-2 text-white hover:bg-blue-700"
               value="繼續"
             />
           </div>
