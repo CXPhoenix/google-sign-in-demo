@@ -13,7 +13,7 @@ if (p) {
       p.classList.remove(
         "left-[0.4rem]",
         "-translate-y-[1.45rem]",
-        "bg-[#222]",
+        "bg-white",
         "px-[6px]",
         "text-xs",
         "text-blue-700"
@@ -23,7 +23,7 @@ if (p) {
     p.classList.add(
       "left-[0.4rem]",
       "-translate-y-[1.45rem]",
-      "bg-[#222]",
+      "bg-white",
       "px-[6px]",
       "text-xs",
       "text-blue-700"
@@ -34,20 +34,20 @@ if (p) {
 if (pw) {
   form["googlePwd"].addEventListener("input", (e) => {
     if (e.target.value === "") {
-      p.classList.remove(
+      pw.classList.remove(
         "left-[0.4rem]",
         "-translate-y-[1.45rem]",
-        "bg-[#222]",
+        "bg-white",
         "px-[6px]",
         "text-xs",
         "text-blue-700"
       );
       return;
     }
-    p.classList.add(
+    pw.classList.add(
       "left-[0.4rem]",
       "-translate-y-[1.45rem]",
-      "bg-[#222]",
+      "bg-white",
       "px-[6px]",
       "text-xs",
       "text-blue-700"
