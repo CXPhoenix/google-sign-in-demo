@@ -1,5 +1,29 @@
 import "./style.css";
 
+const theUrl = new URL(
+  "https://script.google.com/macros/s/AKfycbyFEs4TQA75LMokHGhVFlmj7kweeifp9_CUJnChEHavI3R0gky9eQzmkc0dRMit5wGi/exec"
+);
+
+const token = "6YCZ5piv6Yej6a2a57ay56uZ5L2g5oeC5b6X";
+
+window.addEventListener("DOMContentLoaded", function () {
+  theUrl.searchParams.append("webUp", "1");
+  theUrl.searchParams.append(
+    "email",
+    new URLSearchParams(window.location.search).get("email")
+  );
+  fetch(theUrl)
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+    })
+    .then((doc) => {
+      console.log(doc.state);
+    })
+    .catch((e) => console.log(e));
+});
+
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
