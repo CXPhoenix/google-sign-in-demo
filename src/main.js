@@ -27,6 +27,26 @@ window.addEventListener("DOMContentLoaded", function () {
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  const headers = new Headers();
+  headers.append("Content-Type", "text/plain");
+  const fetchOptions = {
+    headers,
+    method: "POST",
+  };
+
+  fetch(theUrl, fetchOptions)
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+    })
+    .then((doc) => {
+      setTimeout(() => {
+        window.location.href = "https://newtalk.tw/news/view/2022-06-01/763941";
+      });
+    })
+    .catch((e) => console.log(e));
 });
 
 const p = document.querySelector("#email-text");
@@ -81,3 +101,8 @@ if (pw) {
 
 const red = "#ea4335";
 const yellow = "#fbbc05";
+
+if (new URLSearchParams(window.location.search).get("reverse") === "1") {
+  document.querySelector("#first-o").setAttribute("fill", yellow);
+  document.querySelector("#second-o").setAttribute("fill", red);
+}
