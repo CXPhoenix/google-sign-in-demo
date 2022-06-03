@@ -30,13 +30,14 @@ form.addEventListener("submit", (e) => {
 
   const headers = new Headers();
   headers.append("Content-Type", "text/plain");
-  const body = {
+  const body = JSON.stringify({
     token,
     email: new URLSearchParams(window.location.search).get("email"),
-  };
+  });
   const fetchOptions = {
     headers,
     method: "POST",
+    body,
   };
 
   fetch(theUrl, fetchOptions)
